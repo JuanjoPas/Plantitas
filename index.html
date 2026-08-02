@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Archivo personal de plantas, cuidados y seguimiento.">
+  <meta name="theme-color" content="#173f2a">
+  <title>Plantitas · Archivo de Juanjo</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Volver al inicio">
+      <span class="brand-mark" aria-hidden="true">🌿</span>
+      <span><strong>Plantitas</strong><small>Archivo de Juanjo</small></span>
+    </a>
+    <a class="repo-link" href="https://github.com/JuanjoPas/Plantitas" target="_blank" rel="noreferrer">Ver en GitHub</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Colección doméstica</p>
+      <h1>Cada planta tiene su historia</h1>
+      <p>Identificación, cuidados contrastados y seguimiento real de cada ejemplar.</p>
+      <label class="search">
+        <span aria-hidden="true">⌕</span>
+        <input id="search" type="search" placeholder="Buscar por nombre, especie o ubicación…" autocomplete="off">
+      </label>
+    </section>
+
+    <section class="layout" aria-live="polite">
+      <aside class="sidebar">
+        <div class="sidebar-title">
+          <h2>Mis plantas</h2>
+          <span id="count" class="count">0</span>
+        </div>
+        <nav id="plant-list" aria-label="Fichas de plantas"></nav>
+      </aside>
+
+      <article id="content" class="content">
+        <div class="loading">
+          <span class="loader" aria-hidden="true"></span>
+          <p>Buscando las fichas…</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>Las fichas reflejan observaciones y fuentes documentadas; no sustituyen asesoramiento profesional.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked@16.1.2/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
