@@ -3,6 +3,19 @@
 **Fecha de registro:** 2 de agosto de 2026  
 **Uso:** referencia para decidir la ubicación de las plantas y completar sus fichas.
 
+<details open>
+<summary><strong>☀️ Puntos clave</strong></summary>
+
+- **Galería:** luz indirecta; nunca recibe sol directo.
+- **Pasillo:** luz baja o muy baja.
+- **Comedor, sala-vestidor y habitación Alba-David, cerca de la ventana:** luz intensa y posibilidad de sol directo.
+- **Esas mismas estancias, al fondo:** claridad indirecta y sin sol directo habitual.
+- **Balcón:** luz exterior intensa o sol directo, según el punto.
+- **«Comedor, al final»** equivale a luz indirecta baja o media y sol directo prácticamente imposible.
+- Los valores en lux son aproximaciones; para conocer la intensidad exacta hay que medirla.
+
+</details>
+
 ## Datos confirmados
 
 - La fachada principal tiene orientación aproximada **suroeste** y vistas al mar.
