@@ -2,36 +2,49 @@
 
 Archivo personal de plantas domésticas gestionado desde ChatGPT.
 
-## Cómo funciona
+## Regla principal
 
-1. Juanjo envía fotografías y los datos reales de una planta.
-2. ChatGPT identifica la especie con un nivel explícito de confianza.
-3. Contrasta en fuentes oficiales, científicas, universitarias o técnicas la información que pueda variar o entrañar riesgo.
-4. Crea una ficha Markdown a partir de `plantillas/FICHA-PLANTA.md`.
-5. Guarda la ficha en `fichas/` y sus imágenes en `imagenes/<identificador>/`.
-6. El visualizador web descubre automáticamente las fichas y permite buscarlas y leerlas.
+Las fichas publicadas deben estar completas y confirmadas. Una ficha con campos “Sin confirmar” no se considera útil y no puede aparecer en la web.
 
-Los archivos Markdown son la fuente de verdad. La web solo los presenta.
+La información se valida de dos formas:
+
+- Los datos del ejemplar y de su cultivo los confirma Juanjo o se comprueban mediante fotografías adecuadas.
+- La taxonomía, los cuidados, la toxicidad, las plagas y los tratamientos se contrastan con fuentes oficiales, científicas, universitarias o técnicas.
+
+## Flujo obligatorio
+
+1. Juanjo envía fotografías de la planta.
+2. Se abre un borrador privado de recopilación en `borradores/`.
+3. Se identifica la planta con un nivel explícito de confianza.
+4. Se investigan y contrastan todos los datos botánicos y de cuidados.
+5. Se hacen las preguntas necesarias, una por una.
+6. Se solicitan fotografías concretas cuando sean necesarias para confirmar un dato.
+7. Se completa el control de publicación de la plantilla.
+8. Solo entonces se mueve la ficha terminada a `fichas/` y se añade a `fichas/index.json`.
+
+Los borradores no aparecen en la página. Los Markdown publicados son la fuente de verdad y la web solo los presenta.
 
 ## Estructura
 
-- `plantillas/FICHA-PLANTA.md`: plantilla maestra.
-- `fichas/`: una ficha por planta.
-- `imagenes/`: fotografías organizadas por planta.
+- `plantillas/FICHA-PLANTA.md`: plantilla maestra y control de publicación.
+- `borradores/`: recopilación de plantas aún incompletas; no visible en la web.
+- `fichas/`: fichas completas y confirmadas.
+- `imagenes/`: fotografías organizadas por ejemplar.
 - `index.html`, `styles.css` y `app.js`: visualizador.
-- `.github/workflows/pages.yml`: publicación automática en GitHub Pages.
+- `.github/workflows/pages.yml`: publicación automática.
 
 ## Convención de nombres
 
 Usar minúsculas y guiones, sin espacios ni tildes:
 
 - Ficha: `fichas/monstera-deliciosa-salon.md`
-- Imágenes: `imagenes/monstera-deliciosa-salon/2026-08-02-01.jpg`
+- Borrador: `borradores/monstera-deliciosa-salon.md`
+- Imágenes: `imagenes/monstera-deliciosa-salon/2026-08-02-01.webp`
 
-Si hay dos ejemplares de la misma especie, añadir su ubicación o un número al identificador.
+Si existen dos ejemplares de la misma especie, añadir su ubicación o un número.
 
 ## Publicación
 
-El proyecto incluye el flujo oficial de despliegue para GitHub Pages. En la configuración del repositorio, la fuente de Pages debe ser **GitHub Actions**.
+La fuente de GitHub Pages debe ser **GitHub Actions**.
 
-La página prevista es: https://juanjopas.github.io/Plantitas/
+https://juanjopas.github.io/Plantitas/
