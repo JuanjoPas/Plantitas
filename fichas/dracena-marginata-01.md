@@ -214,4 +214,4 @@ Las cochinillas se alimentan de tejidos vegetales. Una población elevada puede 
 
 - **Calidad:** botánica oficial, hortícola profesional, universitaria y veterinaria.
 - **Concordancia:** las fuentes de cultivo coinciden en los cuidados generales; UC IPM, RHS y Missouri Botanical Garden coinciden en la identificación característica de las escamas y en comenzar con retirada física, reservando aceites hortícolas para el control posterior cuando sean necesarios.
-- **Información pendiente:** cultivar, condiciones reales de cultivo, dimensiones, sustrato, historial de cuidados y diagnóstico sanitario.
+- **Información pendiente:** cultivar, condiciones reales de cultivo, dimensiones, sustrato, historial de cuidados, especie exacta de la cochinilla y evolución tras la retirada física.
