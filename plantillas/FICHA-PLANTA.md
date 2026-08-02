@@ -2,174 +2,180 @@
 id: identificador-unico
 nombre: Nombre habitual
 nombre_cientifico: Género especie
-ubicacion: Sin confirmar
-estado: seguimiento
-confianza_identificacion: Baja
+ubicacion: Lugar confirmado
+estado: publicada
+confianza_identificacion: Alta
 fecha_alta: AAAA-MM-DD
 ultima_revision: AAAA-MM-DD
-imagen_principal: ../imagenes/identificador-unico/principal.jpg
-resumen: Breve descripción del ejemplar y su estado actual.
+imagen_principal: ../imagenes/identificador-unico/principal.webp
+resumen: Descripción breve del ejemplar y su estado confirmado.
 ---
 
 # Nombre habitual
 
-> Esta ficha describe un ejemplar concreto. No completar campos desconocidos mediante suposiciones: usar “Sin confirmar”.
+> Ficha definitiva de un ejemplar concreto. No se publica mientras falte algún dato obligatorio. No se admite “Sin confirmar”.
 
-![Vista principal de la planta](../imagenes/identificador-unico/principal.jpg)
+## ✅ Control de publicación
 
-## 🌿 Identificación
+- **Identificación respaldada:** Sí
+- **Condiciones reales confirmadas por Juanjo:** Sí
+- **Fotografías necesarias revisadas:** Sí
+- **Cuidados contrastados con fuentes fiables:** Sí
+- **Estado sanitario evaluado:** Sí
+- **Todos los campos obligatorios completos:** Sí
+- **Fecha de confirmación final:** AAAA-MM-DD
 
-- **Nombre científico:** Género especie
-- **Nombre común:** 
-- **Familia botánica:** 
-- **Origen y distribución:** 
-- **Tipo de planta:** 
-- **Confianza de la identificación:** Baja / Media / Alta / Muy alta
-- **Rasgos usados para identificarla:** 
-- **Posibles alternativas:** Ninguna / Detallar
+## 🌿 Identificación confirmada
 
-## 👀 Observaciones del ejemplar
+- **Nombre científico aceptado:**
+- **Nombre común:**
+- **Familia botánica:**
+- **Origen y distribución:**
+- **Tipo de planta:**
+- **Cultivar, si puede determinarse:**
+- **Confianza:** Alta / Muy alta
+- **Rasgos de identificación comprobados:**
+- **Fuentes taxonómicas:**
 
-Solo hechos visibles en las fotografías, indicando la fecha.
+## 📸 Registro fotográfico
 
-- **Fecha de observación:** AAAA-MM-DD
-- **Vigor y crecimiento:** 
-- **Hojas:** 
-- **Tallos o tronco:** 
-- **Flores o frutos:** 
-- **Sustrato visible:** 
-- **Plagas o síntomas visibles:** 
-- **Lo que no puede comprobarse con estas imágenes:** 
+- **Vista general:**
+- **Hojas, anverso y envés:**
+- **Tallos o tronco:**
+- **Superficie del sustrato y maceta:**
+- **Orificios de drenaje:**
+- **Raíces:** No necesaria / Fotografía enlazada
+- **Síntomas o plagas:** No visibles / Fotografías enlazadas
+- **Fecha de las fotografías:**
 
-## 🧾 Datos confirmados por Juanjo
+## 🧾 Condiciones reales confirmadas
 
-- **Ubicación:** Interior / Exterior / Sin confirmar
-- **Lugar concreto:** 
-- **Orientación y horas de sol directo:** 
-- **Temperatura habitual:** 
-- **Humedad ambiental:** 
-- **Ventilación:** 
-- **Frecuencia y cantidad de riego:** 
-- **Tipo y calidad del agua:** 
-- **Maceta, tamaño y orificios de drenaje:** 
-- **Sustrato y antigüedad:** 
-- **Último trasplante:** 
-- **Abonado:** 
-- **Tratamientos anteriores y resultado:** 
-- **Convivencia con niños o animales:** 
+- **Interior o exterior:**
+- **Lugar concreto:**
+- **Orientación:**
+- **Horas aproximadas de luz y sol directo:**
+- **Temperatura habitual y extremos:**
+- **Humedad ambiental:**
+- **Ventilación o corrientes:**
+- **Frecuencia de riego actual:**
+- **Cantidad y forma de riego:**
+- **Cómo se decide cuándo regar:**
+- **Tipo y calidad del agua:**
+- **Material y diámetro de la maceta:**
+- **Orificios de drenaje y plato o cubremaceta:**
+- **Composición y antigüedad del sustrato:**
+- **Fecha del último trasplante:**
+- **Abonado actual y último abonado:**
+- **Podas realizadas:**
+- **Tratamientos anteriores y resultado:**
+- **Niños o animales con acceso:**
 
-## 🤔 Hipótesis y diagnóstico
+## 👀 Estado actual confirmado
 
-- **Diagnóstico actual:** No establecido
-- **Confianza:** Baja / Media / Alta / Muy alta
-- **Evidencias a favor:** 
-- **Evidencias en contra o incertidumbres:** 
-- **Dato o fotografía necesaria para confirmarlo:** 
+- **Vigor y crecimiento:**
+- **Hojas:**
+- **Tallos o tronco:**
+- **Flores o frutos:**
+- **Sustrato visible:**
+- **Raíces:** No evaluadas porque no es necesario / Estado observado
+- **Plagas o síntomas:**
+- **Diagnóstico sanitario:**
+- **Confianza del diagnóstico:**
 
 ## ☀️ Luz y ubicación recomendadas
 
-- **Nivel de luz:** 
-- **Sol directo tolerado:** 
-- **Ubicación aconsejada:** 
-- **Señales de luz insuficiente:** 
-- **Señales de exceso de sol:** 
+- **Necesidad de luz:**
+- **Sol directo tolerado:**
+- **Ubicación adecuada para este ejemplar:**
+- **Adaptación necesaria:**
+- **Señales de defecto o exceso:**
 
-## 💧 Riego
+## 💧 Riego personalizado
 
-- **Cómo decidir cuándo regar:** 
-- **Forma correcta de riego:** 
-- **Cómo adaptar el riego por estación:** 
-- **Señales de falta de agua:** 
-- **Señales de exceso de agua:** 
-- **Advertencias específicas:** 
-
-> Evitar calendarios rígidos: la frecuencia real depende de luz, temperatura, sustrato, maceta y estado de la planta.
+- **Cuándo regar:**
+- **Cómo comprobarlo:**
+- **Cantidad y técnica:**
+- **Ajuste estacional:**
+- **Calidad de agua recomendada:**
+- **Señales de falta y exceso:**
 
 ## 🌡️ Ambiente
 
-- **Rango de temperatura recomendado:** 
-- **Temperatura mínima tolerable:** 
-- **Humedad recomendada:** 
-- **Ventilación:** 
-- **Sensibilidad a corrientes, calefacción o aire acondicionado:** 
+- **Rango de temperatura recomendado:**
+- **Límite mínimo:**
+- **Humedad recomendada:**
+- **Ventilación:**
+- **Corrientes, calefacción y aire acondicionado:**
 
 ## 🪴 Sustrato, maceta y trasplante
 
-- **Mezcla de sustrato recomendada:** 
-- **Drenaje necesario:** 
-- **Tipo de maceta:** 
-- **Cuándo trasplantar:** 
-- **Época preferente:** 
-- **Tamaño de la nueva maceta:** 
-- **Señales que justifican un trasplante:** 
+- **Sustrato recomendado:**
+- **Drenaje:**
+- **Maceta adecuada:**
+- **Necesita trasplante ahora:** Sí / No
+- **Motivo confirmado:**
+- **Época y tamaño de la próxima maceta:**
+- **Procedimiento:**
 
 ## 🌱 Nutrición, poda y propagación
 
-- **Abonado:** 
-- **Época y frecuencia:** 
-- **Cuándo no abonar:** 
-- **Poda y limpieza:** 
-- **Propagación:** 
+- **Abonado recomendado:**
+- **Época, frecuencia y dosis:**
+- **Cuándo no abonar:**
+- **Poda y limpieza:**
+- **Propagación:**
 
 ## 🌸 Ciclo y desarrollo
 
-- **Crecimiento esperado:** 
-- **Floración o fructificación:** 
-- **Reposo o cambios estacionales:** 
-- **Tamaño adulto aproximado:** 
+- **Ritmo de crecimiento:**
+- **Floración o fructificación:**
+- **Cambios estacionales:**
+- **Tamaño adulto:**
 
 ## 🐛 Plagas y enfermedades
 
-### Problemas frecuentes
+- **Problemas frecuentes de la especie:**
+- **Prevención adaptada al ejemplar:**
+- **Problema actual:** Ninguno observado / Diagnóstico confirmado
+- **Evidencias:**
+- **Tratamiento actual:**
+- **Seguimiento:**
 
-- **Plaga o enfermedad:** síntomas para reconocerla, prevención y actuación inicial.
-- **Plaga o enfermedad:** síntomas para reconocerla, prevención y actuación inicial.
-
-### Diagnóstico diferencial del ejemplar
-
-- **Problema sospechado:** 
-- **Cómo distinguirlo de otros problemas:** 
-- **Prueba u observación necesaria:** 
-
-> No aplicar pesticidas, fungicidas ni tratamientos caseros sin identificar antes el problema y comprobar la tolerancia de esta especie.
+> No aplicar productos sin identificar el problema, comprobar la etiqueta vigente y valorar la tolerancia de la planta.
 
 ## ⚠️ Toxicidad y seguridad
 
-- **Personas:** 
-- **Perros:** 
-- **Gatos:** 
-- **Irritación por savia o espinas:** 
-- **Precauciones de manipulación:** 
+- **Personas:**
+- **Perros:**
+- **Gatos:**
+- **Savia, espinas u otras precauciones:**
+- **Medidas necesarias en esta vivienda:**
 
-## ✅ Acción actual
+## ✅ Plan actual
 
-Indicar solo una acción, la más útil y segura en este momento.
+- **Acción:**
+- **Motivo:**
+- **Confianza:**
+- **Fecha de revisión:**
+- **Indicadores de mejora o empeoramiento:**
 
-- **Acción:** 
-- **Motivo:** 
-- **Confianza:** Baja / Media / Alta / Muy alta
-- **Cuándo observar el resultado:** 
-- **Qué cambio indicará mejora o empeoramiento:** 
+## 📅 Historial
 
-## 📅 Historial de seguimiento
+### AAAA-MM-DD — Alta confirmada
 
-### AAAA-MM-DD — Alta
-
-- **Fotografías:** 
-- **Cambio observado:** 
-- **Acción realizada:** 
-- **Resultado:** Pendiente
+- **Fotografías:**
+- **Datos confirmados:**
+- **Acción:**
+- **Resultado:**
 
 ## 📚 Fuentes
 
-Añadir únicamente fuentes realmente consultadas y explicar brevemente qué respalda cada una.
-
-- [Institución o publicación](https://example.org/) — identificación, cuidados o tratamiento respaldado.
-- **Fotografías de Juanjo, AAAA-MM-DD** — observaciones visibles.
-- **Datos confirmados por Juanjo, AAAA-MM-DD** — condiciones reales de cultivo.
+- **Fotografías de Juanjo, fecha:** hechos visibles.
+- **Datos confirmados por Juanjo, fecha:** condiciones reales.
+- [Fuente oficial, científica, universitaria o técnica](https://example.org/) — información que respalda.
 
 ### Calidad y concordancia
 
-- **Calidad de las fuentes:** Oficial / Científica / Universitaria / Técnica / Práctica
-- **Fuentes independientes que coinciden:** Sí / No / No procede
-- **Información no verificada:** 
+- **Calidad:**
+- **Fuentes independientes que coinciden:**
+- **Discrepancias y decisión adoptada:** Ninguna / Detallar
