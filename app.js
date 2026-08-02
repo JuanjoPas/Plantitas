@@ -1,7 +1,4 @@
-const REPOSITORY = "JuanjoPas/Plantitas";
-const BRANCH = "main";
-const FICHAS_PATH = "fichas";
-const API_URL = `https://api.github.com/repos/${REPOSITORY}/contents/${FICHAS_PATH}?ref=${BRANCH}`;
+const FICHAS_INDEX = "fichas/index.json";
 
 const listElement = document.querySelector("#plant-list");
 const contentElement = document.querySelector("#content");
@@ -24,7 +21,7 @@ function parseFrontMatter(markdown) {
     const separator = line.indexOf(":");
     if (separator < 1) continue;
     const key = line.slice(0, separator).trim();
-    const value = line.slice(separator + 1).trim().replace(/^["']|["']$/g, "");
+    const value = line.slice(separator + 1).trim().replace(/^[\"']|[\"']$/g, "");
     data[key] = value;
   }
 
@@ -47,9 +44,7 @@ function resolveRelativeAssets(container, filePath) {
   container.querySelectorAll("img[src]").forEach((image) => {
     const src = image.getAttribute("src");
     if (!src || /^(https?:|data:)/i.test(src)) return;
-
-    const resolvedPath = new URL(src, `https://plantitas.local/${filePath}`).pathname.slice(1);
-    image.src = `https://raw.githubusercontent.com/${REPOSITORY}/${BRANCH}/${resolvedPath}`;
+    image.src = new URL(src, new URL(filePath, window.location.href)).href;
     image.loading = "lazy";
   });
 }
@@ -87,7 +82,7 @@ function escapeHtml(value) {
 function renderEmpty(filtered = false) {
   contentElement.innerHTML = filtered
     ? `<div class="empty"><div class="empty-icon">🔎</div><h2>Sin coincidencias</h2><p>Prueba con otro nombre, especie o ubicación.</p></div>`
-    : `<div class="empty"><div class="empty-icon">🪴</div><h2>La colección está preparada</h2><p>La primera ficha aparecerá aquí automáticamente cuando se añada un archivo Markdown dentro de <code>fichas/</code>.</p></div>`;
+    : `<div class="empty"><div class="empty-icon">🪴</div><h2>La colección está preparada</h2><p>La primera ficha aparecerá aquí cuando se añada al índice.</p></div>`;
 }
 
 function showPlant(slug) {
@@ -133,31 +128,31 @@ function filterPlants(query) {
 }
 
 async function fetchPlants() {
-  const response = await fetch(API_URL, { headers: { Accept: "application/vnd.github+json" } });
-  if (!response.ok) {
-    if (response.status === 404) return [];
-    throw new Error(`GitHub respondió con el estado ${response.status}`);
-  }
+  const indexResponse = await fetch(FICHAS_INDEX, { cache: "no-store" });
+  if (!indexResponse.ok) throw new Error(`No se pudo leer el índice de fichas (${indexResponse.status})`);
 
-  const entries = await response.json();
-  const files = entries.filter((entry) =>
-    entry.type === "file" &&
-    entry.name.toLowerCase().endsWith(".md") &&
-    entry.name.toLowerCase() !== "readme.md"
+  const filenames = await indexResponse.json();
+  if (!Array.isArray(filenames)) throw new Error("El índice de fichas no es válido");
+
+  const files = filenames.filter((name) =>
+    typeof name === "string" &&
+    name.toLowerCase().endsWith(".md") &&
+    name.toLowerCase() !== "readme.md"
   );
 
-  const loaded = await Promise.all(files.map(async (file) => {
-    const response = await fetch(file.download_url);
-    if (!response.ok) throw new Error(`No se pudo leer ${file.name}`);
+  const loaded = await Promise.all(files.map(async (filename) => {
+    const path = `fichas/${filename}`;
+    const response = await fetch(path, { cache: "no-store" });
+    if (!response.ok) throw new Error(`No se pudo leer ${filename}`);
     const markdown = await response.text();
     const parsed = parseFrontMatter(markdown);
-    const slug = file.name.replace(/\.md$/i, "");
+    const slug = filename.replace(/\.md$/i, "");
     const title = parsed.data.nombre || titleFrom(parsed.body, slug);
 
     return {
       slug,
       title,
-      path: file.path,
+      path,
       body: parsed.body,
       meta: parsed.data,
       searchText: normalizeForSearch([
