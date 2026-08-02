@@ -8,12 +8,12 @@ confianza_identificacion: Alta
 fecha_alta: 2026-08-02
 ultima_revision: 2026-08-02
 imagen_principal: Sin guardar
-resumen: Ejemplar adulto de drácena marginata cultivado en maceta. Ficha general de identificación y cuidados; el estudio de enfermedades y plagas se añadirá por separado.
+resumen: Ejemplar adulto de drácena marginata cultivado en maceta, con infestación intensa por cochinilla de escama en seguimiento.
 ---
 
 # Drácena marginata
 
-> Ficha general del ejemplar. Los cuidados se adaptarán cuando se confirmen sus condiciones reales. El apartado de enfermedades y plagas todavía no contiene un diagnóstico.
+> Ficha general del ejemplar. Los cuidados se adaptarán cuando se confirmen sus condiciones reales. Incluye una ficha sanitaria por infestación de cochinilla de escama.
 
 ## 🌿 Identificación
 
@@ -35,7 +35,7 @@ resumen: Ejemplar adulto de drácena marginata cultivado en maceta. Ficha genera
 - **Tallos:** varios tallos leñosos delgados.
 - **Flores y frutos:** no visibles.
 - **Sustrato y raíces:** no pueden evaluarse con la fotografía disponible.
-- **Estado sanitario:** se observan anomalías, pero la imagen general no permite identificar su causa con fiabilidad.
+- **Estado sanitario:** fotografías cercanas posteriores confirman una infestación intensa por cochinilla de escama.
 - **Fotografía:** aportada por Juanjo en el chat; pendiente de guardar en el repositorio.
 
 ## 🧾 Datos confirmados por Juanjo
@@ -46,7 +46,7 @@ resumen: Ejemplar adulto de drácena marginata cultivado en maceta. Ficha genera
 - **Riego y calidad del agua:** Sin confirmar.
 - **Maceta, drenaje y sustrato:** Sin confirmar.
 - **Último trasplante y abonado:** Sin confirmar.
-- **Tratamientos anteriores:** Sin confirmar.
+- **Tratamientos anteriores:** producto anterior desechado; composición sin identificar. No se aplicará de nuevo.
 - **Convivencia con animales:** Sin confirmar.
 
 ## ☀️ Luz y ubicación
@@ -104,17 +104,72 @@ resumen: Ejemplar adulto de drácena marginata cultivado en maceta. Ficha genera
 
 ## 🐛 Enfermedades y plagas
 
-**Pendiente de ampliar.**
+### Ficha sanitaria 01 — Cochinilla de escama
 
-Esta sección se desarrollará después con:
+- **Fecha del diagnóstico:** 2026-08-02.
+- **Diagnóstico:** infestación por cochinilla de escama.
+- **Tipo probable:** cochinilla acorazada o diaspídida.
+- **Especie exacta:** no determinada.
+- **Confianza:** Alta para cochinilla de escama; Media para el tipo acorazado.
+- **Gravedad visible:** Alta. Hay numerosos individuos agrupados sobre los tallos, en cicatrices foliares y cerca de las bases de las hojas.
+- **Estado:** tratamiento y seguimiento pendientes.
 
-- análisis cercano de los síntomas del ejemplar;
-- identificación o diagnóstico diferencial del organismo causante;
-- relación posible con las demás plantas;
-- medidas de aislamiento y prevención;
-- tratamiento específico y seguimiento.
+#### 👀 Evidencia observada
 
-> No se establece todavía que esta planta sea el origen de la plaga. No aplicar insecticidas, fungicidas ni remedios caseros hasta identificar el problema y comprobar la tolerancia de la especie.
+- Numerosas cubiertas pequeñas, ovaladas o alargadas, blanquecinas y marrones, adheridas a los tallos.
+- Acumulación especialmente intensa en hendiduras, cicatrices y bases foliares.
+- Aspecto de escamas inmóviles con cubierta protectora, compatible con cochinillas diaspídidas.
+- No se ha confirmado melaza pegajosa ni negrilla. Su ausencia sería compatible con cochinilla acorazada, pero aún no está comprobada.
+- Las fotografías no permiten identificar con fiabilidad la especie concreta.
+
+#### 🔎 Diagnóstico diferencial
+
+- **Cochinilla algodonosa:** menos probable porque no predominan masas algodonosas ni cuerpos claramente segmentados.
+- **Cochinilla blanda:** posible, pero menos compatible si no existe melaza y por el aspecto de las cubiertas.
+- **Hongos o depósitos minerales:** poco probables porque las estructuras son discretas, numerosas y están adheridas como escudos.
+- **Cicatrices naturales del tallo:** no explican la gran cantidad de cuerpos superpuestos observados.
+
+#### 🌿 Daño posible
+
+Las cochinillas se alimentan de tejidos vegetales. Una población elevada puede causar pérdida de vigor, amarilleamiento, caída de hojas, crecimiento débil y muerte regresiva de partes de la planta. Las cubiertas protectoras dificultan que los tratamientos de contacto alcancen a los adultos.
+
+#### 🔁 Riesgo para las demás plantas
+
+- **Sí puede propagarse:** las ninfas jóvenes móviles pueden desplazarse por contacto entre plantas y también transportarse en manos, herramientas o material vegetal.
+- **Origen no demostrado:** no puede afirmarse que esta drácena iniciara la plaga de las demás plantas; solo que es un ejemplar intensamente infestado y una fuente actual de dispersión.
+- Mantenerla aislada hasta que varias revisiones consecutivas no detecten individuos vivos.
+
+#### ✅ Plan de actuación progresivo
+
+**Paso actual — retirada física**
+
+1. Mantener la planta separada de las demás.
+2. Retirar cuidadosamente todas las escamas visibles con un cepillo de dientes suave humedecido en agua, prestando especial atención a cicatrices, hendiduras y bases de hojas.
+3. Recoger los restos y desecharlos; no dejarlos sobre el sustrato ni junto a otras plantas.
+4. Limpiar la herramienta después de usarla y lavarse las manos antes de tocar otras plantas.
+
+**Paso posterior — solo si reaparecen individuos vivos**
+
+- Valorar un **aceite hortícola comercial autorizado para plantas ornamentales de interior**, aplicado exactamente según su etiqueta.
+- Hacer antes una prueba en una zona pequeña y esperar para comprobar tolerancia.
+- La cobertura debe alcanzar tallos, bases foliares y escondites; una sola aplicación puede no controlar todas las fases.
+- No aplicar por ahora alcohol, detergente doméstico, fungicida, mezclas caseras ni insecticidas de amplio espectro. La drácena puede sufrir fitotoxicidad y los productos domésticos no tienen una concentración ni una formulación controladas.
+- No combinar productos ni tratar una planta deshidratada, expuesta al sol fuerte o sometida a calor.
+
+#### 📅 Seguimiento
+
+- Revisar tallos, envés y bases de las hojas **una vez por semana**.
+- Una escama adherida puede estar muerta; para comprobar actividad, buscar ninfas nuevas o retirar alguna cubierta y observar el tejido inferior.
+- Registrar después de cada revisión: zonas afectadas, presencia de nuevos individuos, hojas amarillas, caída de hojas y tratamiento realizado.
+- Revisar individualmente las plantas cercanas, sin tratarlas preventivamente si no presentan evidencia.
+- Considerar la infestación controlada solo tras varias revisiones consecutivas sin nuevos individuos; el tiempo exacto dependerá de la evolución observada.
+
+#### ⚠️ Límites del diagnóstico
+
+- La identificación se basa en fotografías y no en examen microscópico.
+- No se conoce todavía la especie exacta ni la fase predominante.
+- Las imágenes originales están pendientes de guardarse en el repositorio.
+- El tratamiento químico concreto no se seleccionará hasta comprobar el resultado de la retirada física y, si fuera necesario, la etiqueta de un producto disponible en España.
 
 ## ⚠️ Toxicidad y seguridad
 
@@ -125,12 +180,21 @@ Esta sección se desarrollará después con:
 
 ## 📅 Historial
 
+### 2026-08-02 — Diagnóstico sanitario
+
+- **Nuevas fotografías:** dos primeros planos de tallos y bases foliares.
+- **Diagnóstico:** cochinilla de escama; probablemente acorazada.
+- **Confianza:** Alta para cochinilla de escama.
+- **Gravedad visible:** Alta.
+- **Acción indicada:** aislamiento y retirada física cuidadosa.
+- **Pendiente:** guardar imágenes optimizadas y comprobar la evolución semanal.
+
 ### 2026-08-02 — Alta
 
 - **Identificación:** drácena marginata, confianza alta.
 - **Fotografía:** vista general aportada en el chat.
 - **Trabajo realizado:** creación de la ficha general de identificación y cuidados.
-- **Pendiente:** estudiar por separado las enfermedades y plagas del ejemplar.
+- **Pendiente inicial:** estudiar por separado las enfermedades y plagas del ejemplar. Completado el 2026-08-02.
 
 ## 📚 Fuentes
 
@@ -140,10 +204,14 @@ Esta sección se desarrollará después con:
 - [NC State Extension — *Dracaena reflexa* var. *angustifolia*](https://plants.ces.ncsu.edu/plants/dracaena-reflexa-var-angustifolia/) — luz, drenaje, riego, nutrición y sensibilidad al fluoruro.
 - [ASPCA — Madagascar Dragon Tree](https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/madagascar-dragon-tree) — toxicidad para animales.
 - **Fotografía de Juanjo, 2026-08-02** — identificación y observaciones visibles.
-- **Datos confirmados por Juanjo, 2026-08-02** — cultivo doméstico y sospecha sanitaria.
+- **Datos confirmados por Juanjo, 2026-08-02** — cultivo doméstico, sospecha sanitaria y antecedente de un producto no identificado que dañó otras plantas.
+- [UC Statewide Integrated Pest Management Program — Scales](https://ipm.ucanr.edu/home-and-landscape/scales/) — biología, control mecánico, aceites hortícolas y necesidad de repetir según el ciclo.
+- [Royal Horticultural Society — Scale insects](https://www.rhs.org.uk/biodiversity/scale-insects) — signos, daños y retirada de adultos y masas de huevos.
+- [Royal Horticultural Society — Orchid and other diaspid scale insects](https://www.rhs.org.uk/biodiversity/orchid-and-other-diaspid-scale-insects) — aspecto de las cochinillas diaspídidas, reproducción y fases móviles.
+- [Missouri Botanical Garden — Scale](https://www.missouribotanicalgarden.org/gardens-gardening/your-garden/help-for-the-home-gardener/advice-tips-resources/insects-pests-and-problems/insects/scale) — retirada manual con cepillo en infestaciones localizadas.
 
 ### Calidad y concordancia
 
 - **Calidad:** botánica oficial, hortícola profesional, universitaria y veterinaria.
-- **Concordancia:** varias fuentes independientes coinciden en luz indirecta, sustrato drenante, riego moderado y sensibilidad al exceso de humedad.
+- **Concordancia:** las fuentes de cultivo coinciden en los cuidados generales; UC IPM, RHS y Missouri Botanical Garden coinciden en la identificación característica de las escamas y en comenzar con retirada física, reservando aceites hortícolas para el control posterior cuando sean necesarios.
 - **Información pendiente:** cultivar, condiciones reales de cultivo, dimensiones, sustrato, historial de cuidados y diagnóstico sanitario.
