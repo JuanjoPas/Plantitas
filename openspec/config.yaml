@@ -1,0 +1,56 @@
+schema: spec-driven
+
+context: |
+  Tech stack: static site — vanilla HTML/CSS/JS (index.html, styles.css, app.js), Markdown content (fichas/), no build step, no package manager.
+  Architecture: content-first repository. Published Markdown fichas in fichas/ are the source of truth; the web viewer only renders them. Drafts live in borradores/ and must never appear on the site.
+  Testing: no test runner, no coverage, no lint/format/type tooling. Only automated gate is the GitHub Pages deploy workflow.
+  Style: file naming lowercase-with-hyphens, no spaces, no accents. Images per specimen under imagenes/{specimen}/.
+  Publishing rule: a ficha is only publishable when complete and confirmed (see README.md); fichas/index.json must be updated when a ficha is published.
+  Deploy: GitHub Pages via .github/workflows/pages.yml on push to main. Remote: JuanjoPas/Plantitas.
+
+strict_tdd: false
+
+testing:
+  test_runner: null
+  strict_tdd: false
+  layers:
+    unit: false
+    integration: false
+    e2e: false
+  coverage: null
+  quality:
+    linter: null
+    type_checker: null
+    formatter: null
+  notes: >
+    No automated testing or quality tooling exists in this repository (static site,
+    no package.json). Verification relies on manual review against the README.md
+    publishing checklist and the GitHub Pages deploy. If tests are added later,
+    update this block and re-evaluate strict_tdd.
+
+rules:
+  proposal:
+    - Include rollback plan for risky changes
+    - Respect the publishing rule: incomplete fichas never leave borradores/
+  specs:
+    - Use Given/When/Then for scenarios
+    - Use RFC 2119 keywords (MUST, SHALL, SHOULD, MAY)
+  design:
+    - Include sequence diagrams for complex flows
+    - Document architecture decisions with rationale
+  tasks:
+    - Group by phase, use hierarchical numbering
+    - Keep tasks completable in one session
+  apply:
+    guidelines:
+      - Follow existing code patterns
+      - Keep fichas/index.json in sync when adding or renaming published fichas
+      - Follow naming convention: lowercase, hyphens, no accents
+    tdd: false
+    test_command: ""
+  verify:
+    test_command: ""
+    build_command: ""
+    coverage_threshold: 0
+  archive:
+    - Warn before merging destructive deltas

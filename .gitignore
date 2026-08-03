@@ -1,0 +1,7 @@
+# Local AI runtime state
+.atl/
+.claude/
+.claude-profile-lock
+
+# Local Pages staging output (recreated by the publish workflow)
+_site/
