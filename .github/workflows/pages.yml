@@ -25,13 +25,23 @@ jobs:
       - name: Descargar repositorio
         uses: actions/checkout@v4
 
+      - name: Validar contenido publicado
+        run: node scripts/validate-content.mjs
+
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
+
+      - name: Preparar sitio público
+        run: |
+          rm -rf _site
+          mkdir _site
+          cp index.html styles.css app.js .nojekyll _site/
+          cp -r fichas imagenes _site/
 
       - name: Preparar archivos
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
 
       - name: Publicar
         id: deployment

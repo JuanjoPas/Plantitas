@@ -56,7 +56,7 @@ function setUrl(slug) {
   history.replaceState({}, "", url);
 }
 
-function renderList(items = plants) {
+function renderList(items) {
   countElement.textContent = items.length;
   listElement.innerHTML = "";
 
@@ -86,18 +86,19 @@ function renderEmpty(filtered = false) {
 }
 
 function showPlant(slug) {
-  const plant = plants.find((item) => item.slug === slug);
+  const visiblePlants = getVisiblePlants();
+  const plant = visiblePlants.find((item) => item.slug === slug);
   if (!plant) {
     selectedSlug = null;
     setUrl(null);
-    renderList();
-    renderEmpty();
+    renderList(visiblePlants);
+    renderEmpty(Boolean(searchElement.value.trim()));
     return;
   }
 
   selectedSlug = slug;
   setUrl(slug);
-  renderList();
+  renderList(visiblePlants);
 
   const chips = [
     plant.meta.nombre_cientifico,
@@ -112,19 +113,32 @@ function showPlant(slug) {
     <div class="markdown-body">${safeMarkdown}</div>
   `;
   resolveRelativeAssets(contentElement, plant.path);
-  window.scrollTo({ top: document.querySelector(".layout").offsetTop - 90, behavior: "smooth" });
+  const behavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+  window.scrollTo({ top: document.querySelector(".layout").offsetTop - 90, behavior });
 }
 
-function filterPlants(query) {
-  const normalized = normalizeForSearch(query.trim());
-  const filtered = normalized
+function getVisiblePlants() {
+  const normalized = normalizeForSearch(searchElement.value.trim());
+  return normalized
     ? plants.filter((plant) => plant.searchText.includes(normalized))
     : plants;
+}
 
-  renderList(filtered);
+function filterPlants() {
+  const visiblePlants = getVisiblePlants();
+  const activeSlug = visiblePlants.some((plant) => plant.slug === selectedSlug)
+    ? selectedSlug
+    : visiblePlants[0]?.slug || null;
 
-  if (!filtered.length && normalized) renderEmpty(true);
-  else if (!selectedSlug && filtered.length) showPlant(filtered[0].slug);
+  if (!activeSlug) {
+    selectedSlug = null;
+    setUrl(null);
+    renderList(visiblePlants);
+    renderEmpty(Boolean(searchElement.value.trim()));
+    return;
+  }
+
+  showPlant(activeSlug);
 }
 
 async function fetchPlants() {
@@ -140,7 +154,7 @@ async function fetchPlants() {
     name.toLowerCase() !== "readme.md"
   );
 
-  const loaded = await Promise.all(files.map(async (filename) => {
+  const results = await Promise.allSettled(files.map(async (filename) => {
     const path = `fichas/${filename}`;
     const response = await fetch(path, { cache: "no-store" });
     if (!response.ok) throw new Error(`No se pudo leer ${filename}`);
@@ -165,6 +179,13 @@ async function fetchPlants() {
     };
   }));
 
+  const loaded = results.flatMap((result, index) => {
+    if (result.status === "fulfilled") return [result.value];
+    console.warn(`No se pudo cargar ${files[index]}`, result.reason);
+    return [];
+  });
+
+  if (files.length && !loaded.length) throw new Error("No se pudo cargar ninguna ficha");
   return loaded.sort((a, b) => a.title.localeCompare(b.title, "es"));
 }
 
@@ -172,19 +193,22 @@ async function init() {
   try {
     plants = await fetchPlants();
     const requested = new URL(window.location.href).searchParams.get("ficha");
-    renderList();
+    const visiblePlants = getVisiblePlants();
+    renderList(visiblePlants);
 
     if (!plants.length) {
       renderEmpty();
       return;
     }
 
-    showPlant(plants.some((plant) => plant.slug === requested) ? requested : plants[0].slug);
+    showPlant(visiblePlants.some((plant) => plant.slug === requested)
+      ? requested
+      : visiblePlants[0]?.slug || null);
   } catch (error) {
     console.error(error);
     contentElement.innerHTML = `<div class="error"><div class="empty-icon">🌧️</div><h2>No se pudieron cargar las fichas</h2><p>Comprueba la conexión y vuelve a intentarlo. El repositorio sigue conservando todos los documentos.</p></div>`;
   }
 }
 
-searchElement.addEventListener("input", (event) => filterPlants(event.target.value));
+searchElement.addEventListener("input", filterPlants);
 init();
